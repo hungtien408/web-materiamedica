@@ -228,11 +228,28 @@ public partial class ad_single_product : System.Web.UI.Page
             string ContentEn = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtContentEn")).Content.Trim()));
             string TagEn = ((RadTextBox)row.FindControl("txtTagEn")).Text.Trim();
 
+            var dpFromDate = (RadDatePicker)row.FindControl("dpFromDate");
+            //var dpToDate = (RadDatePicker)row.FindControl("dpToDate");
+            var dpStartFromDate = (RadTimePicker)row.FindControl("dpStartFromDate");
+            //var dpEndToDate = (RadTimePicker)row.FindControl("dpEndToDate");
+
+            var strFromDate = dpFromDate.SelectedDate.HasValue ? dpFromDate.SelectedDate.Value.ToShortDateString() : "";
+            //var strToDate = dpToDate.SelectedDate.HasValue ? dpToDate.SelectedDate.Value.ToShortDateString() : "";
+            var strStartFromDate = dpStartFromDate.SelectedDate.HasValue
+                ? dpStartFromDate.SelectedDate.Value.ToShortTimeString()
+                : "";
+            //var strEndToDate = dpEndToDate.SelectedDate.HasValue
+            //    ? dpEndToDate.SelectedDate.Value.ToShortTimeString()
+            //    : "";
+
+            strFromDate = string.IsNullOrEmpty(strFromDate) ? "" : strFromDate + " " + strStartFromDate;
+            //strToDate = string.IsNullOrEmpty(strToDate) ? "" : strToDate + " " + strEndToDate;
+
             if (e.CommandName == "PerformInsert")
             {
                 var oProduct = new Product();
 
-                ImageName = oProduct.ProductInsert(
+                ImageName = oProduct.ProductInsert2(
                     ImageName,
                     MetaTittle,
                     MetaDescription,
@@ -261,7 +278,8 @@ public partial class ad_single_product : System.Web.UI.Page
                     IsSaleOff,
                     IsShowOnHomePage,
                     Priority,
-                    IsAvailable
+                    IsAvailable,
+                    strFromDate
                 );
 
                 ProductID = oProduct.ProductID;
@@ -305,6 +323,7 @@ public partial class ad_single_product : System.Web.UI.Page
 
                 dsUpdateParam["IsShowOnHomePage"].DefaultValue = IsShowOnHomePage;
                 dsUpdateParam["IsAvailable"].DefaultValue = IsAvailable;
+                dsUpdateParam["DateEvent"].DefaultValue = strFromDate;
 
                 if (!string.IsNullOrEmpty(ImageName))
                 {
@@ -357,9 +376,17 @@ public partial class ad_single_product : System.Web.UI.Page
 
             var dv = (DataView)ObjectDataSource1.Select();
             var ProductID = ((HiddenField)row.FindControl("hdnProductID")).Value;
+            var hdnFromDate = ((HiddenField)row.FindControl("hdnFromDate")).Value;
+            //var hdnToDate = ((HiddenField)row.FindControl("hdnToDate")).Value;
+
             var ddlCategory = (RadComboBox)row.FindControl("ddlCategory");
             var ddlManufacturer = (RadComboBox)row.FindControl("ddlManufacturer");
             var ddlOrigin = (RadComboBox)row.FindControl("ddlOrigin");
+
+            var dpFromDate = (RadDatePicker)row.FindControl("dpFromDate");
+            //var dpToDate = (RadDatePicker)row.FindControl("dpToDate");
+            var dpStartFromDate = (RadTimePicker)row.FindControl("dpStartFromDate");
+            //var dpEndToDate = (RadTimePicker)row.FindControl("dpEndToDate");
 
             if (!string.IsNullOrEmpty(ProductID))
             {
@@ -371,6 +398,19 @@ public partial class ad_single_product : System.Web.UI.Page
                     ddlManufacturer.SelectedValue = dv[0]["ManufacturerID"].ToString();
                 if (!string.IsNullOrEmpty(dv[0]["OriginID"].ToString()))
                     ddlOrigin.SelectedValue = dv[0]["OriginID"].ToString();
+
+                if (!string.IsNullOrEmpty(dv[0]["DateEvent"].ToString()))
+                {
+                    var date = DateTime.Parse(dv[0]["DateEvent"].ToString());
+                    dpFromDate.SelectedDate = date;
+                    dpStartFromDate.SelectedDate = date;
+                }
+                //if (!string.IsNullOrEmpty(dv[0]["ToDate"].ToString()))
+                //{
+                //    var edate = DateTime.Parse(dv[0]["ToDate"].ToString());
+                //    dpToDate.SelectedDate = edate;
+                //    dpEndToDate.SelectedDate = edate;
+                //}
             }
             else
             {

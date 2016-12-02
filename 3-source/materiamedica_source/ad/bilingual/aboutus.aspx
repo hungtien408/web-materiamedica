@@ -435,6 +435,11 @@
                     </asp:GridTemplateColumn>
                     <asp:GridBoundColumn DataField="ProductCategoryName" HeaderText="Danh mục" SortExpression="ProductCategoryName" />
                     <asp:GridBoundColumn DataField="ManufacturerName" HeaderText="Nhà sản xuất" SortExpression="ManufacturerName" Visible="False" />
+                    <asp:GridTemplateColumn HeaderText="Ngày sự kiện" SortExpression="DateEvent" HeaderStyle-Width="1%">
+                        <ItemTemplate>
+                            <%# string.Format("{0:dd/MM/yyyy}", Eval("DateEvent"))%>
+                        </ItemTemplate>
+                    </asp:GridTemplateColumn>
                     <asp:GridTemplateColumn DataField="Priority" HeaderStyle-Width="1%" HeaderText="Thứ tự"
                         SortExpression="Priority">
                         <ItemTemplate>
@@ -719,6 +724,30 @@
                                                             <%--<asp:RadTextBox runat="server" Width="500px" ID="RadTextBox1" Text='<%# Bind("ProductName") %>' />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtProductName"
                                             Display="Dynamic" ErrorMessage="Nhập tên sản phẩm" SetFocusOnError="true">*</asp:RequiredFieldValidator>--%>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left">Ngày sự kiện
+                                                        </td>
+                                                        <td>
+                                                            <asp:RadDatePicker ShowPopupOnFocus="True" ID="dpFromDate" runat="server" Culture="vi-VN"
+                                                                Calendar-CultureInfo="vi-VN" Width="110px">
+                                                                <Calendar ID="Calendar3" runat="server">
+                                                                    <SpecialDays>
+                                                                        <asp:RadCalendarDay Repeatable="Today">
+                                                                            <ItemStyle CssClass="rcToday" />
+                                                                        </asp:RadCalendarDay>
+                                                                    </SpecialDays>
+                                                                </Calendar>
+                                                                <DateInput ID="DateInput1" DateFormat="dd/MM/yyyy" DisplayDateFormat="dd/MM/yyyy"
+                                                                    runat="server">
+                                                                </DateInput>
+                                                                <DatePopupButton HoverImageUrl="" ImageUrl="" />
+                                                            </asp:RadDatePicker>
+                                                            <asp:RadTimePicker ID="dpStartFromDate" runat="server" Width="90px" ShowPopupOnFocus="true"
+                                                                TimeView-StartTime="07:00:00" TimeView-Interval="00:30:00" TimeView-EndTime="18:00:01" Visible="False">
+                                                            </asp:RadTimePicker>
+                                                            <asp:HiddenField ID="hdnFromDate" runat="server" Value='<%# Eval("DateEvent") %>' />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1048,8 +1077,8 @@
         </asp:RadGrid>
     </asp:RadAjaxPanel>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ProductSelectAll"
-        TypeName="TLLib.Product" DeleteMethod="ProductDelete" InsertMethod="ProductInsert"
-        UpdateMethod="ProductUpdate">
+        TypeName="TLLib.Product" DeleteMethod="ProductDelete" InsertMethod="ProductInsert2"
+        UpdateMethod="ProductUpdate2">
         <DeleteParameters>
             <asp:Parameter Name="ProductID" Type="String" />
         </DeleteParameters>
@@ -1083,6 +1112,7 @@
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             <asp:Parameter Name="Priority" Type="String" />
             <asp:Parameter Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="DateEvent" Type="String" />
         </InsertParameters>
         <SelectParameters>
             <asp:Parameter Name="StartRowIndex" Type="String" />
@@ -1156,6 +1186,7 @@
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             <asp:Parameter Name="Priority" Type="String" />
             <asp:Parameter Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="DateEvent" Type="String" />
         </UpdateParameters>
     </asp:ObjectDataSource>
     <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="ProductCategorySelectAll"

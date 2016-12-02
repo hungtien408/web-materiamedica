@@ -256,7 +256,7 @@
                     <div class="df-box about-df">
                         <div class="title-df">
                             <h1>
-                                About us</h1>
+                                 Về chúng tôi</h1>
                         </div>
                         <div class="about-main">
                             <div class="about-img">
@@ -276,7 +276,7 @@
                         <%--<div class="news-archire"><a href="tin.tuc.aspx">News archive</a></div>--%>
                         <div class="title-df">
                             <h1>
-                                News</h1>
+                                Tin tức</h1>
                         </div>
                         <div class="news-main">
                             <asp:ListView ID="lstNews" runat="server" DataSourceID="odsNews" EnableModelValidation="True">
@@ -329,7 +329,7 @@
     <div class="container">
         <div class="product-df">
             <h1>
-                Product</h1>
+                Sản phẩm</h1>
             <asp:ListView ID="lstProduct" runat="server" DataSourceID="odsProduct" EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="wrapper-product">

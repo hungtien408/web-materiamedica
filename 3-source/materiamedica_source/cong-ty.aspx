@@ -20,7 +20,7 @@
                         <div class="wrapper-news1">
                             <div class="days-news">
                                 <span>
-                                    <%# string.Format("{0:dd.MM.yyyy}", Eval("CreateDate"))%></span>
+                                    <%# string.Format("{0:dd.MM.yyyy}", Eval("DateEvent"))%></span>
                             </div>
                             <div class="clr">
                             </div>

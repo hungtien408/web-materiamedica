@@ -67,122 +67,139 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-    </asp:ToolkitScriptManager>
-    <div id="wrapper">
-        <div id="wrapper-in">
-            <!--header-->
-            <div id="header">
-                <div class="wrapper-head">
-                    <div class="container">
-                        <div class="logo">
-                            <a id="A1" href="~/" runat="server">
-                                <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
-                        </div>
-                        <div class="header-top">
-                            <div class="hotline">
-                                Tư vấn <strong>0907 018 309</strong></div>
-                        </div>
-                        <div class="wrapper-menu">
-                            <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false">
-                                <span class="fa fa-reorder"></span>Menu</a>
-                            <ul id="menu" class="desktop-992">
-                                <li><a href="cong-ty.aspx">Công ty</a></li>
-                                <li><a href="san-pham.aspx">Anaferon</a></li>
-                                <li><a href="benh-ho-hap.aspx">Bệnh viêm đường hô hấp</a></li>
-                                <li><a href="benh-do-virus.aspx">Bệnh do virus</a></li>
-                                <li><a href="lien-he.aspx">Liên Hệ</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div id="wrapper">
+            <div id="wrapper-in">
+                <!--header-->
+                <div id="header">
+                    <div class="wrapper-head">
+                        <div class="container">
+                            <div class="logo">
+                                <a id="A1" href="~/" runat="server">
+                                    <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
+                            </div>
+                            <div class="header-top">
+                                <div class="hotline">
+                                    Tư vấn <strong>0907 018 309</strong>
+                                </div>
+                            </div>
+                            <div class="wrapper-menu">
+                                <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false">
+                                    <span class="fa fa-reorder"></span>Menu</a>
+                                <ul id="menu" class="desktop-992">
+                                    <li class="desktop-992"><a href="~/" runat="server"><span class="fa fa-home"></span></a>
+                                        <ul>
+                                            <li><a href="materia-medica-ct-38.aspx">Công Ty</a></li>
+                                            <li><a href="cong-ty.aspx">Tin tức</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="san-pham.aspx">Anaferon</a></li>
+                                    <li><a href="benh-ho-hap.aspx">Bệnh hô hấp</a></li>
+                                    <li><a href="benh-do-virus.aspx">Bệnh thường gặp ở trẻ</a></li>
+                                    <li><a href="lien-he.aspx">Liên Hệ</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--end header-->
-            <hr />
-            <!--main-->
-            <div id="mainContent">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-            <!--end main-->
-            <hr />
-            <!--footer-->
-            <div id="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="ft-1">
-                                <div class="ft-img">
-                                   <img src="assets/images/logo1.png" alt="">
+                <!--end header-->
+                <hr />
+                <!--main-->
+                <div id="mainContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--end main-->
+                <hr />
+                <!--footer-->
+                <div id="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="ft-1">
+                                    <div class="ft-img">
+                                        <img src="assets/images/logo1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="ft-2">
+                                    <p>
+                                        Trifonovskaya st., 47, bld. 1, Moscow, 129272, Russia
+                                    </p>
+                                    <p>
+                                        Phone:<span class="phone">+7 495 276-15-71</span>E-mail:<a class="email" href="mailto:moffice@materiamedica.ru">moffice@materiamedica.ru</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ft-3">
+                                    <p>
+                                        <span>©</span> Materia Medica Holding
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="ft-2">
-                                <p>
-                                    Trifonovskaya st., 47, bld. 1, Moscow, 129272, Russia</p>
-                                <p>
-                                    Phone:<span class="phone">+7 495 276-15-71</span>E-mail:<a class="email" href="mailto:moffice@materiamedica.ru">moffice@materiamedica.ru</a></p>
-                            </div>
+                    </div>
+                </div>
+                <!--end footer-->
+            </div>
+            <!--menumobile-->
+            <div id="menumobile" class="mobile-panel mobilep-left">
+                <div class="close-menu">
+                    <a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a>
+                </div>
+                <div class="menu-in">
+                    <div class="menu-mobile">
+                        <div class="logo">
+                            <a id="A2" href="~/" runat="server">
+                                <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
                         </div>
-                        <div class="col-md-4">
-                            <div class="ft-3">
-                                <p>
-                                    <span>©</span> Materia Medica Holding</p>
-                            </div>
-                        </div>
+                        <ul id="menuMobile" class="menu-nav">
+                            <li><a href="~/" runat="server">Trang chủ</a>
+                                <ul>
+                                    <li><a href="materia-medica-ct-38.aspx">Công ty</a></li>
+                                    <li><a href="cong-ty.aspx">Tin tức</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!--end footer-->
+            <!--menumobile-->
         </div>
-        <!--menumobile-->
-        <div id="menumobile" class="mobile-panel mobilep-left">
-            <div class="close-menu">
-                <a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a></div>
-            <div class="menu-in">
-                <div class="menu-mobile">
-                    <div class="logo">
-                        <a id="A2" href="~/" runat="server">
-                            <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul id="menuMobile" class="menu-nav">
-                    </ul>
-                </div>
+        <!--active-->
+        <div id="runScript" runat="server">
+        </div>
+        <div id="content">
+            Scroll &darr;
+        </div>
+        <a href="#" id="back-to-top" title="Back to top">
+            <img src="assets/images/top-button.png" alt=" " /></a>
+        <div id="updateie">
+            <div class="textup text-center">
+                Please upgrade IE 8+, Download <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">here</a>
             </div>
         </div>
-        <!--menumobile-->
-    </div>
-    <!--active-->
-    <div id="runScript" runat="server">
-    </div>
-    <div id="content">
-        Scroll &darr;</div>
-    <a href="#" id="back-to-top" title="Back to top">
-        <img src="assets/images/top-button.png" alt=" " /></a>
-    <div id="updateie">
-        <div class="textup text-center">
-            Please upgrade IE 8+, Download <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                here</a></div>
-    </div>
-    <script src="assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
-    <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
-    <script src="assets/js/superfish.js"></script>
-    <script src="assets/js/jquery.textheight.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.bgbox.js" type="text/javascript"></script>
-    <script src="assets/js/cloud-zoom.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/jquery.popup.js"></script>
-    <script src="assets/js/jquery.nivo.slider.pack.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/jquery.bxslider.min.js"></script>
-    <script src="assets/js/jquery.menu.level.js"></script>
-    <script src="assets/js/jquery.main.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
+        <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+        <script src="assets/js/superfish.js"></script>
+        <script src="assets/js/jquery.textheight.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.bgbox.js" type="text/javascript"></script>
+        <script src="assets/js/cloud-zoom.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/jquery.popup.js"></script>
+        <script src="assets/js/jquery.nivo.slider.pack.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/jquery.bxslider.min.js"></script>
+        <script src="assets/js/jquery.menu.level.js"></script>
+        <script src="assets/js/jquery.main.js"></script>
     </form>
 </body>
 </html>
