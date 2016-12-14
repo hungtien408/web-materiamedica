@@ -19,21 +19,29 @@
         <div class="row wrap-contact">
             <div class="col-md-6">
                 <div class="address-contact">
-                    <h4 class="text-uppercase">
-                        địa chỉ của chúng tôi</h4>
+                    <h4 class="text-uppercase">VPĐD OOO "NPF" MATERIA MEDICA HOLDING" TẠI TPHCM</h4>
                     <p>
-                        <span class="fa fa-map-marker"></span>111, Tên Lửa, P.Bình Trị Đông B, Q.Bình Tân,
-                        Tp.HCM</p>
+                        <span class="fa fa-map-marker"></span>Phòng 10.01, Lầu 10, Lant Buiding
+
+56-58-60 Hai Bà Trưng, Phường Bến Nghé, Quận 1, TpHCM
+                    </p>
                     <p>
-                        <span class="fa fa-phone"></span>091 737 7999</p>
+                        <span class="fa fa-phone"></span>08 3521 8580 -08 3521 8581s
+                    </p>
+
+                     <h4 class="text-uppercase">Trụ sở chính OOO "NPF" MATERIA MEDICA HOLDING</h4>
                     <p>
-                        <span class="fa fa-envelope"></span><a href="http://www.tranlegroup.com/">tranlegroup.com</a></p>
+                        <span class="fa fa-map-marker"></span>129272, Trifonovskaya st., 47, bld. 1, Moscow, Russia​
+                    </p>
+                    <p>
+                        <span class="fa fa-phone"></span>Tel./fax. +7 495 276-15-71​
+                    </p>
+
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="wrap-send">
-                    <h4 class="text-uppercase">
-                        Chúng tôi có thể giúp gì cho bạn ?</h4>
+                    <h4 class="text-uppercase">Chúng tôi có thể giúp gì cho bạn ?</h4>
                     <div class="contact-w">
                         <div class="contact-input">
                             <asp:TextBox ID="txtFullName" CssClass="contact-textbox" runat="server"></asp:TextBox>
@@ -63,7 +71,7 @@
                     <div class="contact-w">
                         <div class="contact-input">
                             <asp:TextBox ID="txtNoiDung" CssClass="contact-area" runat="server" TextMode="MultiLine"></asp:TextBox>
-                                <asp:TextBoxWatermarkExtender ID="txtNoiDung_WatermarkExtender" runat="server" Enabled="True"
+                            <asp:TextBoxWatermarkExtender ID="txtNoiDung_WatermarkExtender" runat="server" Enabled="True"
                                 WatermarkText="Lời nhắn" TargetControlID="txtNoiDung">
                             </asp:TextBoxWatermarkExtender>
                             <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"

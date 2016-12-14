@@ -15,7 +15,7 @@
         <%--<div class="title">Mongolia</div>--%>
         <div class="product-df">
             <h1>
-                Product</h1>
+                Sản phẩm</h1>
             <asp:ListView ID="lstProduct" runat="server" DataSourceID="odsProduct" EnableModelValidation="True">
                 <ItemTemplate>
                     <div class="wrapper-product">

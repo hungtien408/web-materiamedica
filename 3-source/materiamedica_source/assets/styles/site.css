@@ -1148,6 +1148,7 @@ ul.ul-second {
 .product-content h1 {
     font-size: 30px;
     font-weight: bold;
+    line-height:40px;
 }
 
 .product-img {

@@ -1,5 +1,6 @@
 ﻿function pageLoad() {
 }
+
 (function ($) {
     $(window).load(function () {
         $('#slider').nivoSlider({
@@ -19,12 +20,33 @@
     });
     $(function () {
         myfunload();
-        mypageload();
-    });
+        mypageload();});
 })(jQuery);
 //function===============================================================================================
 /*=============================fun=========================================*/
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function myfunload() {
+    
     $(".panel-a").mobilepanel();
     $("#menu > li").clone().appendTo($("#menuMobile"));
     $("#menuMobile input").remove();
@@ -45,9 +67,60 @@ function myfunload() {
     });
     $(".menu-level li:last-child").addClass("last");
     $(".menu-level .active").find("ul:first").show();
+    /******Start Show popup one times******/
+    var pop = getCookie("pop");
+    if (pop !== "0") {
+        $('#myModal').linhnguyen($('#myModal').data());
+        setCookie("pop", "0", 1);
+    }
+    var a, b = false,
+                c = window.location.href;
+    var newWindow = false;
+    var singlePopup = false;
+    function triggerEvent(el, type) {
+        if ((el[type] || false) && typeof el[type] == 'function') {
+            el[type](el);
+        }
+    }
 
-    $('#myModal').linhnguyen($('#myModal').data());
+    $(function () {
+        $('a:not([href^=#])').on('click', function (e) {
+            if (!$(this).hasClass('close-popup-modal') && !$(this).parent().hasClass('bx-pager-item') && !$(this).hasClass('link-slider')) {
+                e.preventDefault();
+                if (this.target == '_blank') {
+                    newWindow = true;
+                }
+                else if ($(this).hasClass('iframe-project') || $(this).hasClass('iframe')) {
+                    singlePopup = true;
+                }
+                c = this.href;
+                b = true;
+                triggerEvent(window, 'onbeforeunload');
+            }
+        });
+    });
+    window.onbeforeunload = function (e) {
 
+        if (b) {
+            if (newWindow) {
+                var win = window.open(c, '_blank');
+                win.focus();
+                newWindow = false;
+            }
+            else if (singlePopup) {
+                singlePopup = false;
+            }
+            else {
+                window.location.href = c;
+            }
+            return;
+        } else {
+            console.log('close');
+            setCookie("pop", "1", 1);
+            //debugger;
+        }
+    }
+    /******End Show popup one times*********/
     if ($('#productSlider').size() == 1) {
         var productSlider = $('#productSlider').imagesLoaded(function () {
             productSlider.owlCarousel({
@@ -204,4 +277,7 @@ $(window).load(function(){
     // for (var i = 0; i < len; i++) {
     //    array[i].appendTo('.ul-second');
     // }
+
+    
+    
 });
