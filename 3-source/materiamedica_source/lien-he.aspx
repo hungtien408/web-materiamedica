@@ -26,7 +26,7 @@
 56-58-60 Hai Bà Trưng, Phường Bến Nghé, Quận 1, TpHCM
                     </p>
                     <p>
-                        <span class="fa fa-phone"></span>08 3521 8580 -08 3521 8581s
+                        <span class="fa fa-phone"></span>08 3521 8580 
                     </p>
 
                      <h4 class="text-uppercase">Trụ sở chính OOO "NPF" MATERIA MEDICA HOLDING</h4>

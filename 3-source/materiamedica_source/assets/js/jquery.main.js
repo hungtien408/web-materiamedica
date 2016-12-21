@@ -18,6 +18,7 @@
             animSpeed: 1500,
         });
     });
+    EqualSizer('.thumb-items .item');
     $(function () {
         myfunload();
         mypageload();});
@@ -281,3 +282,18 @@ $(window).load(function(){
     
     
 });
+function DoEqualSizer(myclass) {
+    var heights = $(myclass).map(function () {
+        $(this).height('auto');
+        return $(this).height();
+    }).get(),
+    maxHeight = Math.max.apply(null, heights);
+    $(myclass).height(maxHeight);
+};
+
+function EqualSizer(myclass) {
+    $(document).ready(DoEqualSizer(myclass));
+    window.addEventListener('resize', function () {
+        DoEqualSizer(myclass);
+    });
+};
