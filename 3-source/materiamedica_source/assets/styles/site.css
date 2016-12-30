@@ -106,7 +106,6 @@ hr {
     background: rgba(0, 0, 0, 0) url("../images/bg-hotline.png") no-repeat scroll left center;
     color: #8d8e8f;
     float: right;
-    font-family: "Roboto-Regular";
     font-size: 14px;
     line-height: 45px;
     margin-bottom: 10px;
@@ -114,14 +113,12 @@ hr {
     padding-left: 45px;
 }
 
-    .hotline > span {
-        display: block;
-    }
 
-    .hotline strong {
+    .hotline span {
         color: #333334;
         font-size: 20px;
         font-weight: 700;
+        display:inline-block;
     }
 
 .wrapper-menu {
