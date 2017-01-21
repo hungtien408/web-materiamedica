@@ -7,10 +7,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="banner-main">
         <uc1:bannersub ID="bannersub1" runat="server" />
-        <div class="text-banner">
+        <%--<div class="text-banner">
             <span>
                 <img src="assets/images/logo1.png" alt="" /></span>
-        </div>
+        </div>--%>
     </div>
     <div class="container">
         <div class="news-main1">
