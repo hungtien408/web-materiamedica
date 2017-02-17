@@ -210,7 +210,7 @@ function myfunload() {
         if ($(this).hasClass("current")) {
             $(idboxs).height("100%");
             var offset = $(this).offset();
-            $("html, body").stop(true, true).animate({ scrollTop: (offset.top) }, 500);
+            //$("html, body").stop(true, true).animate({ scrollTop: (offset.top) }, 500);
         } else {
             $("html, body").stop(true, true).animate({ scrollTop:0}, 500, function () {
                 $(idboxs).height(0);

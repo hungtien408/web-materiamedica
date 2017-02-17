@@ -28,6 +28,9 @@
                     <p>
                         <span class="fa fa-phone"></span>08 3521 8580 
                     </p>
+                    <p>
+                        <span class="fa fa fa-envelope"></span><a href="mailTo:info@anaferon.vn">info@anaferon.vn</a>
+                    </p>
 
                      <h4 class="text-uppercase">Trụ sở chính OOO "NPF" MATERIA MEDICA HOLDING</h4>
                     <p>
@@ -35,6 +38,9 @@
                     </p>
                     <p>
                         <span class="fa fa-phone"></span>Tel./fax. +7 495 276-15-71​
+                    </p>
+                    <p>
+                        <span class="fa fa fa-envelope"></span><a href="mailTo:info@anaferon.vn">info@anaferon.vn</a>
                     </p>
 
                 </div>

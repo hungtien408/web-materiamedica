@@ -134,6 +134,7 @@
                                                         flashplayer: "assets/js/jwplayer.flash.swf",
                                                         width: '100%',
                                                         aspectratio: '16:9',
+                                                        autostart: true,
                                                         primary: "html5"
                                                     });
                                                 });
