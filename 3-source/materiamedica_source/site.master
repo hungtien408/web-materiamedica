@@ -139,6 +139,12 @@
                                     <p>
                                         <span>©</span> Materia Medica Holding
                                     </p>
+                                    <p>
+                                        Đang online: <%= Application["visitors_online"].ToString() %>
+                                    </p>
+                                    <p>
+                                        Tổng số: <%= Application["TatCa"].ToString() %>
+                                    </p>
                                 </div>
                             </div>
                         </div>

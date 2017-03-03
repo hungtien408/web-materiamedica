@@ -96,6 +96,7 @@
                                                         width: '100%',
                                                         aspectratio: '16:9',
                                                         autostart: true,
+                                                        repeat: true,
                                                         primary: "html5"
                                                     });
                                                 });
