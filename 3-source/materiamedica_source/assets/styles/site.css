@@ -1814,7 +1814,7 @@ ul.ul-second {
 
     .main-news-left .main-title a {
         font-size: 20px;
-        color: #0058bb;
+        color: #202020;
         font-weight: bold;
         margin-bottom: 12px;
         display: block;
@@ -1929,8 +1929,9 @@ ul.ul-second {
 }
 
     .view-detail a {
-        color: #01aef0 !important;
+        /*color: #01aef0 !important;*/
         font-size: 13px !important;
+        font-style:italic;
     }
 
 .video-main {
@@ -1939,7 +1940,7 @@ ul.ul-second {
 }
 
 .video-title {
-    color: #01aef0;
+    color: #202020;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
