@@ -15,7 +15,7 @@
         <div class="news-main">
             <div class="wrapper-news">
                 <div class="main-news">
-                    <div class="main-news-left">
+                    <div class="main-news-left width-50">
                         <asp:ListView ID="lstNewHot" runat="server" DataSourceID="odsNewHot" EnableModelValidation="True">
                             <ItemTemplate>
                                 <div class="news-image">
@@ -64,7 +64,7 @@
                             </SelectParameters>
                         </asp:ObjectDataSource>
                     </div>
-                    <div class="main-news-right">
+                  <%--  <div class="main-news-right">
                          <asp:ListView ID="lstVideoCategory" runat="server" DataSourceID="odsVideoCategory"
                             EnableModelValidation="True">
                             <ItemTemplate>
@@ -78,8 +78,8 @@
                                 <span runat="server" id="itemPlaceholder" />
                             </LayoutTemplate>
                         </asp:ListView>
-                    </div>
-                    <div class="quangcao">
+                    </div>--%>
+                    <div class="quangcao width-45">
                         <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">
                             <ItemTemplate>
                                 <div class="video-main">

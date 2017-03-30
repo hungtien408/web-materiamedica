@@ -2,9 +2,9 @@
 <div id="sliderBanner" class="nivoSlider">
     <asp:ListView ID="lstBannerSub" runat="server" DataSourceID="odsBannerSub" EnableModelValidation="True">
         <ItemTemplate>
-            <div class="slide">
-                <img id="Img1" src='<%# "~/res/advertisement/" + Eval("FileName") %>' runat="server"
-                    alt='<%# Eval("FileName") %>' /></div>
+            
+                <a href='<%# Eval("Website") %>'><img id="Img1" src='<%# "~/res/advertisement/" + Eval("FileName") %>' runat="server"
+                    alt='<%# Eval("FileName") %>' /></a>
         </ItemTemplate>
         <LayoutTemplate>
             <span runat="server" id="itemPlaceholder" />

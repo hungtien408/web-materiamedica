@@ -78,10 +78,10 @@
                                         </div>
                                         <div class="thumb-tit">
                                             <a href='<%# progressTitle(Eval("ProductName")) + "-vt-" + Eval("ProductID") + ".aspx" %>'><%# Eval("ProductName") %> </a>
-                                            <p>
-                                                <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 60)%></p>
-                                            <div class="view-detail">
-                                                <a href='<%# progressTitle(Eval("ProductName")) + "-vt-" + Eval("ProductID") + ".aspx" %>'>Xem tiếp</a></div>
+                                           <%-- <p>
+                                                <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 60)%></p>--%>
+                                            <%--<div class="view-detail">
+                                                <a href='<%# progressTitle(Eval("ProductName")) + "-vt-" + Eval("ProductID") + ".aspx" %>'>Xem tiếp</a></div>--%>
                                         </div>
                                     </div>
                                 </ItemTemplate>
@@ -93,7 +93,7 @@
                             TypeName="TLLib.Product">
                             <SelectParameters>
                                 <asp:Parameter DefaultValue="2" Name="StartRowIndex" Type="String" />
-                                <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
+                                <asp:Parameter DefaultValue="3" Name="EndRowIndex" Type="String" />
                                 <asp:Parameter Name="Keyword" Type="String" />
                                 <asp:Parameter Name="ProductName" Type="String" />
                                 <asp:Parameter Name="Description" Type="String" />
@@ -163,10 +163,10 @@
                             </SelectParameters>
                         </asp:ObjectDataSource>
                         <asp:ListView ID="lstVideoCategory" runat="server" DataSourceID="odsVideoCategory"
-                            EnableModelValidation="True">
+                            EnableModelValidation="True" Visible="false">
                             <ItemTemplate>
                                 <div class="banner-img">
-                                    <a href="javascript:void(0);">
+                                    <a href='<%# Eval("MetaTitleEn") %>'>
                                         <img id="Img1" alt="<%# Eval("ImageName") %>" src='<%# "res/videocategory/" + Eval("ImageName") %>'
                                             visible='<%# string.IsNullOrEmpty(Eval("ImageName").ToString()) ? false : true %>' /></a>
                                 </div>

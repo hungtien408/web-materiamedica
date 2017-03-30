@@ -279,7 +279,7 @@
                             <%# Eval("Title")%>
                         </ItemTemplate>
                     </asp:GridTemplateColumn>--%>
-                    <asp:GridTemplateColumn HeaderText="Website" DataField="Website" SortExpression="Website" Visible="False">
+                    <asp:GridTemplateColumn HeaderText="Website" DataField="Website" SortExpression="Website">
                         <ItemTemplate>
                             <a href='<%# Eval("Website")%>' target="_blank">
                                 <%# Eval("Website")%></a>
@@ -419,7 +419,7 @@
                                         <asp:TextBox ID="txtDescription" runat="server" Text='<%# Bind("Description") %>' Width="500px" TextMode="MultiLine"></asp:TextBox>
                                     </td>
                                 </tr>--%>
-                                <tr class="invisible">
+                                <tr>
                                     <td class="left" valign="top">
                                         Website
                                     </td>

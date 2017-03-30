@@ -293,6 +293,17 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td class="left" valign="top">
+                                        Link
+                                    </td>
+                                    <td>
+                                        <asp:RadTextBox ID="txtMetaTitleEn" runat="server" 
+                                            EmptyMessage="Link..." Text='<%# Bind("MetaTitleEn") %>' 
+                                            Width="500px">
+                                        </asp:RadTextBox>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td class="left">
                                         Thứ tự
                                     </td>
@@ -364,17 +375,7 @@
                                         <hr />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="left" valign="top">
-                                        Meta Title(En)
-                                    </td>
-                                    <td>
-                                        <asp:RadTextBox ID="txtMetaTitleEn" runat="server" 
-                                            EmptyMessage="Meta Title(En)..." Text='<%# Bind("MetaTitleEn") %>' 
-                                            Width="500px">
-                                        </asp:RadTextBox>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td class="left" valign="top">
                                         Meta Description(En)

@@ -215,8 +215,8 @@
                 <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
                     <ItemTemplate>
                         <div class="item" id='<%# "li-1" + Eval("AdsBannerID") %>'>
-                            <img id="Img1" src='<%# "~/res/advertisement/" + Eval("FileName") %>' runat="server"
-                                alt='<%# Eval("FileName") %>' />
+                            <a href='<%# Eval("Website") %>'><img id="Img1" src='<%# "~/res/advertisement/" + Eval("FileName") %>' runat="server"
+                                alt='<%# Eval("FileName") %>' /></a>
                             <div class="carousel-caption">
                                 <%# Eval("CompanyName") %>
                             </div>
@@ -261,7 +261,7 @@
                         <div class="title-df">
                             <h1>Về chúng tôi</h1>
                         </div>
-                        <div class="about-main">
+                        <%--<div class="about-main">
                             <div class="about-img">
                                 <a href="cong-ty.aspx">
                                     <img src="assets/images/about-img1.png" alt=" " /></a>
@@ -269,7 +269,18 @@
                             <div class="about-name">
                                 <a href="cong-ty.aspx">TOP-10<br>
                                     pharmaceutical companies<br>
-                                    on OTC market</a>
+                                    Russia market</a>
+                            </div>
+                        </div>--%>
+                        <div class="about-main">
+                            <div class="about-img">
+                                <a href="http://www.anaferon.vn/materia-medica-ct-38.aspx">
+                                    <img src="assets/images/about-img1.png" alt=" " /></a>
+                            </div>
+                            <div class="about-name">
+                                <a href="http://www.anaferon.vn/materia-medica-ct-38.aspx">TOP-10<br>
+                                    pharmaceutical companies<br>
+                                    Russia market</a>
                             </div>
                         </div>
                     </div>
@@ -374,7 +385,7 @@
                     <asp:Parameter Name="IsNew" Type="String" />
                     <asp:Parameter Name="IsBestSeller" Type="String" />
                     <asp:Parameter Name="IsSaleOff" Type="String" />
-                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
                     <asp:Parameter Name="FromDate" Type="String" />
                     <asp:Parameter Name="ToDate" Type="String" />
                     <asp:Parameter Name="Priority" Type="String" />

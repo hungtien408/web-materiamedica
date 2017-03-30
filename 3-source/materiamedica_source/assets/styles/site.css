@@ -1046,7 +1046,7 @@ ul.ul-second {
 .wrapper-top {
     background: #eeeeee;
     padding-bottom: 30px;
-    margin-top: -60px;
+    /*margin-top: -60px;*/
 }
 
 .df-box {
@@ -1158,6 +1158,7 @@ ul.ul-second {
     display: inline-block;
     overflow: hidden;
     padding-left: 20px;
+    padding-top: 20px;
 }
 
 .product-img a {
@@ -1798,7 +1799,10 @@ ul.ul-second {
     vertical-align: top;
     border-right: 1px solid #d7d6d7;
 }
-
+.main-news-left.width-50
+{
+    width:50%;
+}
     .main-news-left .news-image {
         position: relative;
         margin-bottom: 10px;
@@ -1809,7 +1813,7 @@ ul.ul-second {
             box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
             display: block;
             margin: 0 auto;
-            max-width: 100%;
+            width: 75%;
         }
 
     .main-news-left .main-title a {
@@ -1843,6 +1847,11 @@ ul.ul-second {
     display: inline-block;
     width: 34%;
 }
+.quangcao.width-45
+{
+    width:45%;
+    margin-left:40px;
+}
 /*.quangcao {
   display: inline-block;
   width: 25%;
@@ -1855,7 +1864,7 @@ ul.ul-second {
         display: block;
         position: relative;
         vertical-align: top;
-        width: 98px;
+        width: 170px;
     }
 
         .main-news-right .news-thumb .item .thumb-img img {
@@ -1871,7 +1880,7 @@ ul.ul-second {
         width: 100%;
     }
 
-        .main-news-right .news-thumb .item .thumb-tit a {
+        .main-news-right .news-thumb .item .thumb-tit > a {
             color: #202020;
             font-size: 14px;
             line-height: 17px;
@@ -1982,4 +1991,23 @@ ul.ul-second {
 }
 .right-news .view-detail {
     float: left;
+}
+/*=============================template-left================*/
+.template-left .img-text {
+    float: left;
+    margin-right: 15px;
+}
+.img-text img
+{
+    max-width:100%;
+}
+/*=============================template-right================*/
+.template-right .img-text {
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.wrapper-text{
+    line-height: 26px;
+    text-align: justify;
 }
