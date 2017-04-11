@@ -312,7 +312,7 @@
                                 TypeName="TLLib.Product">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                                    <asp:Parameter DefaultValue="2" Name="EndRowIndex" Type="String" />
+                                    <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
                                     <asp:Parameter Name="Keyword" Type="String" />
                                     <asp:Parameter Name="ProductName" Type="String" />
                                     <asp:Parameter Name="Description" Type="String" />
